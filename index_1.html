@@ -38,19 +38,46 @@
             <div class="content">
                 <h1>Welcome</h1>
                     <div class="Buton_Efect">
-                        <h2>Mở đo nhiệt độ</h2>
+                        <h2>Đồ án hoạt động</h2>
+                        <label for="NhietDo">Nhiet Do:</label>
+                        <span id="NhietDo"></span>
+                        <br/>
+                    <label for="DoAm">Do Am:</label>
+                        <span id="DoAm"></span>
+                        <br/>
+                    <label for="DoAmDat">Do Am Dat:</label>
+                        <span id="DoAmDat"></span>   
+                        <br/>                     
+                        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+                        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+                        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+                        <script type="module">    
+                            const firebaseConfig = {
+                                    apiKey: "AIzaSyDesdb8XOYlChLnWYhUEBFgSsDNkMVL7lg",
+                                    authDomain: "data-nhietdo.firebaseapp.com",
+                                    databaseURL: "https://data-nhietdo-default-rtdb.firebaseio.com",
+                                    projectId: "data-nhietdo",
+                                    storageBucket: "data-nhietdo.appspot.com",
+                                    messagingSenderId: "672256816972",
+                                    appId: "1:672256816972:web:7f3036c0ffd74c20c001e9",
+                                    measurementId: "G-TEW27S3ME0"
+                                    };
+                                    // Initialize Firebase
+                                    firebase.initializeApp(firebaseConfig);
+                                    firebase.analytics();
+                                    var tempDHT = document.getElementById('NhietDo');
+                                    var dbRef = firebase.database().ref().child('NhietDo');
+                                    var humDHT = document.getElementById('DoAm');
 
-                            <label class="switch">
-                                <input type="checkbox" checked>
-                                    <span class="slider"> </span>
-
-                                <label class="switch">
-                                    <input type="checkbox"  checked>
-                                        <span class="slider"> </span>
-                                        
-                            </label>
+                                    var dbRef3 = firebase.database().ref().child('DoAm');
+                                    var soilMoist = document.getElementById('DoAmDat');
+                                    var dbRef2 = firebase.database().ref().child('DoAmDat');
+                                    dbRef.on('value', snap => NhietDo.innerText = snap.val());
+                                    dbRef2.on('value', snap => DoAmDat.innerText = snap.val());
+                                    dbRef3.on('value', snap => DoAm.innerText = snap.val());
+                                                        </script>
                         </div>
-                 <p>Đề tài nói về bật tắc công tắc dựa trên ESP8266 và cảm biến nhiệt độ độ ẩm DHT11 và đèn led để hực hiện đồ án này. </p>
+                 <p>Chào mừng các bạn đến với trang web của chúng tôi.Đề tài nói về cảm biến nhiệt độ, độ ẩm cùng với đó là độ ẩm đất bật tắt led cùng với ESP8266.</p>
             </div>
     </section>
 
