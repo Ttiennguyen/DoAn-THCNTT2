@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serifs;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0 0 10px black;
+    background-color: transparent;
+}
+
+header .logo {
+    flex: 1;
+    color: black;
+    text-shadow: 0 0 2px black;
+}
+header ul{
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+header ul li a:hover{
+    border-bottom: 2px solid rgb(28, 177, 177);
+}
+.Buton_Efect
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%,-50%);
+    text-align: center;
+
+}
+.Buton_Efect h2 {
+    margin-bottom: 20px;
+    font-family: arial;
+    margin-left: 370px;
+    margin-top: -30px;
+}
+
+.content h1
+{
+    margin-top:20px;
+    font-family: arial;
+    text-transform: uppercase;
+    font-size: 1.7em;
+}
+
+.Buton_Efect .switch{
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 60px;
+    left: 100px;
+    top: 0;
+    margin: 0px 70px;
+}
+.Buton_Efect .slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.switch input{display: none;}
+
+.Buton_Efect .slider:before
+{
+    position: absolute;
+    content: " ";
+    height: 50px;
+    width: 50px;
+    left: 0px;
+    bottom: 5px;
+    background-color:rgb(121, 121, 121);
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+input:checked + .slider
+{
+    background-color:#ff278c;
+}
+
+input:checked + .slider:before
+{
+    transform: translateX(50px);
+}
+
+/*----------------------------------------------------------------*/
+
+section {
+    display:flex;
+    min-height:100vh;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+
+section .content 
+{
+    width: 80%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    background-color: rgb(11, 237, 245);
+    padding: 100px 350px 100px 100px; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+/* ---------------- contact ----------------*/
+
+#Contact .content{
+    width : 100%;
+    padding: 100px;
+}
+
+#Contact .content{
+    background: gold;
+    text-align: center;
+}
+
+#Contact .image{
+    width : 100%;
+    height : 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:25px;
+}
+
+#Contact .image img{
+    width: 20%;
+}
+
+#Contact .thongtin_1 p {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    margin-top: 20px; 
+}
+
+#Contact .thongtin_2 p {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    margin-top: 20px; 
+    margin-left: 450px;
+}
+#Contact .thongtin_3 p {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    margin-top: 20px; 
+    margin-top: 20px; 
+    margin-left: 900px;
+}
+
