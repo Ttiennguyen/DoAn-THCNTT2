@@ -53,15 +53,16 @@ header ul li a:hover{
 
 }
 .Buton_Efect h2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-family: arial;
-    margin-left: 370px;
-    margin-top: -30px;
+    margin-left: 350px;
+    margin-top: -20px;
+
 }
 
 .content h1
 {
-    margin-top:20px;
+    margin-top: 40px;
     font-family: arial;
     text-transform: uppercase;
     font-size: 1.7em;
